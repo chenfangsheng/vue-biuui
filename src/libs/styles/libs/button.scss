@@ -1,0 +1,119 @@
+@import "../common/variables";
+
+.#{$prefix} {
+    &-btn{
+        position: relative;
+        display: inline-block;
+        font-weight: 400;
+        text-align: center;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        cursor: pointer;
+        background-image: none;
+        border: 1px solid transparent;
+        white-space: nowrap;
+        user-select: none;
+        padding: 8px .2rem 9px;
+        font-size: .26rem;
+        border-radius: 2px;
+        color: #515a6e;
+        background-color: #fff;
+        border-color: #dcdee2;
+        vertical-align: middle;
+        line-height: 1;
+        overflow: hidden;
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            background-image: radial-gradient(circle, #ccc 10%, transparent 10.01%);
+            background-repeat: no-repeat;
+            background-position: 50%;
+            transform: scale(10, 10);
+            opacity: 0;
+            transition: transform .2s, opacity .5s;
+        }
+        &:active:after {
+            transform: scale(0, 0);
+            opacity: .4;
+            transition: 0s;
+        }
+        
+        >span{
+            vertical-align: middle;
+        }
+        
+        &-small{
+            font-size: 10px;
+            padding: 2px .1rem 3px;
+        }
+        
+        &-block{
+            border-radius: 3px;
+            width: 100%;
+            padding: 12px .2rem 13px;
+            margin-top: .3rem;
+        }
+        
+        &-angle{
+            border-radius: 0;
+        }
+        
+        &-circle{
+            border-radius: 100px;
+        }
+        
+        &-default{
+            background-color: #fff;
+            border-color: #dcdee2;
+            color: #515a6e;
+        }
+        &-primary{
+            background-color: #2d8cf0;
+            border-color: #2d8cf0;
+            color: #fff;
+        }
+        &-text{
+            color: #515a6e;
+            background-color: transparent;
+            border-color: transparent;
+        }
+        &-dashed{
+            color: #515a6e;
+            background-color: #fff;
+            border-color: #dcdee2;
+            border-style: dashed;
+        }
+        &-info{
+            background-color: #2db7f5;
+            border-color: #2db7f5;
+            color: #fff;
+        }
+        &-success{
+            background-color: #19be6b;
+            border-color: #19be6b;
+            color: #fff;
+        }
+        &-warn{
+            background-color: #ff9900;
+            border-color: #ff9900;
+            color: #fff;
+        }
+        &-error{
+            background-color: #ed4014;
+            border-color: #ed4014;
+            color: #fff;
+        }
+        
+        &[disabled]{
+            pointer-events: none;
+            cursor: not-allowed;
+            opacity:0.6;
+        }
+    }
+}

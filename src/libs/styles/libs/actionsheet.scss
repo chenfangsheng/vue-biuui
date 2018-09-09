@@ -1,0 +1,48 @@
+@import "../common/variables";
+
+.#{$prefix} {
+    &-actionsheet {
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: $base-z-index + 2;
+        background-color: $bg-color;
+        transform: translate(0, 100%);
+        transition: transform .2s;
+        &-active {
+            transform: translate(0, 0);
+        }
+    }
+    
+    &-actionsheet-item, &-actionsheet-action {
+        display: block;
+        position: relative;
+        font-size: .28rem;
+        color: $content-color;
+        height: 1rem;
+        line-height: 1rem;
+        background-color: #fff;
+    }
+    &-actionsheet-item{
+        position: relative;
+        &:after {
+            position: absolute;
+            z-index: 0;
+            bottom: 0;
+            left: 0;
+            content: "";
+            width: 100%;
+            height: 1px;
+            background: $border-color;
+            transform: scaleY(0.5);
+        }
+        &:last-child:after {
+            display: none;
+        }
+    }
+    &-actionsheet-action {
+        margin-top: .15rem;
+    }
+}

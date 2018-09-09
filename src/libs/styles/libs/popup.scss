@@ -1,0 +1,72 @@
+@import "../common/variables";
+
+@keyframes biu-zoom-in {
+    from {
+        opacity: 0;
+        transform: scale3d(.3, .3, .3);
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+
+.#{$prefix} {
+    &-popup{
+        position: fixed;
+        z-index: $base-z-index + 1;
+        transition: transform .2s;
+        pointer-events: none;
+        display: flex;
+        flex-direction: column;
+        &-center{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            opacity: 0;
+            z-index: $base-z-index + 2;
+            transform: translate(-50%, -50%) scale(.95);
+            transform-origin: 50% 50%;
+            transition: transform .1s;
+            pointer-events: none;
+            &.#{$prefix}-popup-show {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1);
+                pointer-events: auto;
+                * {
+                    pointer-events: auto;
+                }
+            }
+        }
+        &-bottom{
+            transform: translate(0, 100%);
+            right: 0;
+            bottom: 0;
+        }
+        &-left{
+            transform: translate(-100%, 0);
+            left: 0;
+            top: 0;
+            height: 100%;  
+        }
+        &-right{
+            transform: translate(100%, 0);
+            right: 0;
+            top: 0;
+            height: 100%;
+        }
+        &-show {
+            pointer-events: auto;
+            transform: translate(0, 0);
+        }
+        &-content {
+            flex: 1;
+            position: relative;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            img {
+                vertical-align: middle;
+            }
+        }
+    }
+}

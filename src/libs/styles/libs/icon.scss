@@ -1,0 +1,226 @@
+@import "../common/variables";
+
+$iconfont-icons: 'BIU-ICONS';
+
+@font-face {
+  font-family: $iconfont-icons;
+  src: url('//at.alicdn.com/t/font_807478_znn2zmh9enm.ttf') format('truetype');
+}
+
+[class^="#{$prefix}-icon-"]:before, [class*=" #{$prefix}-icon-"]:before {
+  font-family: $iconfont-icons;
+  font-size: inherit;
+  display: inline-block;
+}
+
+[class^="icon-custom-"]:before, [class*=" icon-custom-"]:before {
+  font-size: inherit;
+  display: inline-block;
+}
+
+.#{$prefix} {
+  &-icon-zan-solid:before {
+    content: '\e673';
+  }
+  &-icon-zan:before {
+    content: '\e614';
+  }
+  &-icon-welfare:before {
+    content: '\e748';
+  }
+  &-icon-king:before {
+    content: '\e743';
+  }
+  &-icon-flower:before {
+    content: '\e741';
+  }
+  &-icon-login-out:before {
+    content: '\e734';
+  }
+  &-icon-click:before {
+    content: '\e72c';
+  }
+  &-icon-clock:before {
+    content: '\e72a';
+  }
+  &-icon-video:before {
+    content: '\e729';
+  }
+  &-icon-money:before {
+    content: '\e728';
+  }
+  &-icon-hot:before {
+    content: '\e725';
+  }
+  &-icon-wifi:before {
+    content: '\e724';
+  }
+  &-icon-scan:before {
+    content: '\e722';
+  }
+  &-icon-refresh:before {
+    content: '\e71b';
+  }
+  &-icon-tel:before {
+    content: '\e71a';
+  }
+  &-icon-more:before {
+    content: '\e719';
+  }
+  &-icon-male:before {
+    content: '\e708';
+  }
+  &-icon-password:before {
+    content: '\e707';
+  }
+  &-icon-female:before {
+    content: '\e706';
+  }
+  &-icon-sales:before {
+    content: '\e704';
+  }
+  &-icon-sales:before {
+    content: '\e704';
+  }
+  &-icon-notice:before {
+    content: '\e702';
+  }
+  &-icon-computer:before {
+    content: '\e701';
+  }
+  &-icon-menu:before {
+    content: '\e6ff';
+  }
+  &-icon-alien:before {
+    content: '\e60b';
+  }
+  &-icon-range:before {
+    content: '\e718';
+  }
+  &-icon-color:before {
+    content: '\e608';
+  }
+  &-icon-list:before {
+    content: '\e6a3';
+  }
+  &-icon-collapse:before {
+    content: '\e6d8';
+  }
+  &-icon-switch:before {
+    content: '\e613';
+  }
+  &-icon-badge:before {
+    content: '\e626';
+  }
+  &-icon-swiper:before {
+    content: '\e68e';
+  }
+  &-icon-tab:before {
+    content: '\e69f';
+  }
+  &-icon-pull:before {
+    content: '\e637';
+  }
+  &-icon-tick:before {
+    content: '\e716';
+  }
+  &-icon-fork:before {
+    content: '\e715';
+  }
+  &-icon-linkage:before {
+    content: '\e603';
+  }
+  &-icon-top-three:before {
+    content: '\e600';
+  }
+  &-icon-top-two:before {
+    content: '\e717';
+  }
+  &-icon-help:before {
+    content: '\e714';
+  }
+  &-icon-more-solid:before {
+    content: '\e712';
+  }
+  &-icon-select-solid:before {
+    content: '\e711';
+  }
+  &-icon-select:before {
+    content: '\e710';
+  }
+  &-icon-like-solid:before {
+    content: '\e70c';
+  }
+  &-icon-like:before {
+    content: '\e70b';
+  }
+  &-icon-phone:before {
+    content: '\e6fe';
+  }
+  &-icon-camera:before {
+    content: '\e6fd';
+  }
+  &-icon-home:before {
+    content: '\e6fc';
+  }
+  &-icon-email:before {
+    content: '\e6fb';
+  }
+  &-icon-circle:before {
+    content: '\e633';
+  }
+  &-icon-checkbox:before {
+    content: '\e654';
+  }
+  &-icon-arrow-right:before {
+    content: '\e713';
+  }
+  &-icon-popup:before {
+    content: '\e752';
+  }
+  &-icon-time:before {
+    content: '\e705';
+  }
+  &-icon-action-sheet:before {
+    content: '\e612';
+  }
+  &-icon-city:before {
+    content: '\e611';
+  }
+  &-icon-flexbox:before {
+    content: '\e6f9';
+  }
+  &-icon-preview:before {
+    content: '\e616';
+  }
+  &-icon-radio:before {
+    content: '\e61e';
+  }
+  &-icon-slider:before {
+    content: '\e610';
+  }
+  &-icon-top:before {
+    content: '\e65f';
+  }
+  &-icon-grid:before {
+    content: '\e739';
+  }
+  &-icon-media-list:before {
+    content: '\e71c';
+  }
+  &-icon-error:before {
+    content: '\e70f';
+  }
+  &-icon-warn:before {
+    content: '\e70e';
+  }
+  &-icon-success:before {
+    content: '\e70d';
+  }
+  &-icon-button:before {
+    content: '\e703';
+  }
+  &-icon-dialog:before {
+    content: '\e6fa';
+  }
+}

@@ -1,0 +1,29 @@
+@import "../common/variables";
+
+.#{$prefix} {
+    &-flexbox{
+        display: flex;
+        align-items: center;
+        &-vertical {
+            flex-direction: column;
+            height: 100%;
+            .#{$prefix}-flexbox-item {
+                width: 100%;
+            }
+        }
+        &-item {
+            flex: 1;
+            &-start {
+                align-self: flex-start;
+                justify-self: flex-end;
+            }
+            &-center {
+                align-self: center;
+            }
+            &-end {
+                align-self: flex-end;
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,101 @@
+@import "../common/variables";
+
+.#{$prefix} {
+    &-grid{
+        &-wrap{
+            position: relative;
+            overflow: hidden;
+            .iconfont, [class^="#{$prefix}-icon-"],[class*=" #{$prefix}-icon-"]{
+                font-size: .48rem;
+                display: block;
+                padding-bottom: .1rem;
+            }
+        }
+        &-title{
+            position: relative;
+            padding: .05rem .24rem .1rem;
+            font-size: .28rem;
+            text-align: left;
+            color: $aid-title-color;
+        }
+        &-line{
+            .#{$prefix}-grid-item:before {
+                position: absolute;
+                z-index: 0;
+                top: 0;
+                right: 0;
+                content: "";
+                width: 1px;
+                height: 100%;
+                background: $border-color;
+                transform: scaleX(0.5);
+            }
+            .#{$prefix}-grid-item:after {
+                position: absolute;
+                z-index: 0;
+                bottom: 0;
+                left: 0;
+                content: "";
+                width: 100%;
+                height: 1px;
+                background: $border-color;
+                transform: scaleY(0.5);
+            }
+        }
+        &-item{
+            float: left;
+            position: relative;
+            z-index: 0;
+            padding: .35rem 0;
+            font-size: .28rem;
+            text-align: center;
+            overflow: hidden;
+            background-color: #fff;
+            &-center{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        &-2{
+            .#{$prefix}-grid-item{
+                width: 50%;
+                &:nth-child(2n):before{
+                    display: none;
+                }
+            }
+        }
+        &-3{
+            .#{$prefix}-grid-item{
+                width: 33.333333%;
+                &:nth-child(3n):before{
+                    display: none;
+                }
+            }
+        }
+        &-4{
+            .#{$prefix}-grid-item{
+                width: 25%;
+                &:nth-child(4n):before{
+                    display: none;
+                }
+            }
+        }
+        &-5{
+            .#{$prefix}-grid-item{
+                width: 20%;
+                &:nth-child(5n):before{
+                    display: none;
+                }
+            }
+        }
+        &-6{
+            .#{$prefix}-grid-item{
+                width: 16.666666%;
+                &:nth-child(6n):before{
+                    display: none;
+                }
+            }
+        }
+    }
+}

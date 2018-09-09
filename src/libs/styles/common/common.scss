@@ -1,0 +1,136 @@
+@import "./variables";
+
+.#{$prefix} {
+    &-Invisible-mask{
+        position: fixed;
+        z-index: 2000;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        top: 0;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        background: transparent;
+    }
+    &-black-mask{
+        position: fixed;
+        z-index: 2000;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        top: 0;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        background-color: rgba(0,0,0,.5);
+    }
+    //color
+    &-default{
+        color: #333;
+    }
+    &-primary{
+        color: #2d8cf0;
+    }
+    &-info{
+        color: #2db7f5;
+    }
+    &-success{
+        color: #19be6b;
+    }
+    &-warning{
+        color: #ff9900;
+    }
+    &-error{
+        color: #ed4014;
+    }
+    //bg
+    &-bg-default{
+        background-color: #333;
+    }
+    &-bg-primary{
+        background-color: #2d8cf0;
+    }
+    &-bg-info{
+        background-color: #2db7f5;
+    }
+    &-bg-success{
+        background-color: #19be6b;
+    }
+    &-bg-warning{
+        background-color: #ff9900;
+    }
+    &-bg-error{
+        background-color: #ed4014;
+    }
+    //remark
+    &-remarks{
+        display: table;
+        white-space: nowrap;
+        height: auto;
+        overflow: hidden;
+        line-height: 1;
+        text-align: center;
+        padding: .3rem 0;
+        color: #666;
+        &:before {
+            content: '';
+            display: table-cell;
+            position: relative;
+            top: 50%;
+            width: 50%;
+            background-repeat: no-repeat;
+            background-image: $line;
+            background-position: right 1em top 50%;
+        }
+        &:after {
+            content: '';
+            display: table-cell;
+            position: relative;
+            top: 50%;
+            width: 50%;
+            background-repeat: no-repeat;
+            background-image: $line;
+            background-position: left 1em top 50%;
+        }
+    }
+    &-public-pd{
+        padding: .3rem;
+    }
+    //text-align
+    &-text-center{
+        text-align: center;
+    }
+    //flex center
+    &-center {
+        display: flex;
+        align-items: center;
+        -webkit-box-align: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+    }
+    //block
+    &-block {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}

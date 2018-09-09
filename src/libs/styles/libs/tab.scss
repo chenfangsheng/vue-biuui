@@ -1,0 +1,125 @@
+@import "../common/variables";
+$prefixClass: biu-tab;
+$easing-in-out: cubic-bezier(0.35, 0, 0.25, 1);
+$effect-duration: .3s;
+.#{$prefixClass} {
+  &-ink-bar {
+    position: absolute;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: $tab-bar-active-color;
+    text-align: center;
+    &-transition-forward {
+      transition: right $effect-duration $easing-in-out,
+      left $effect-duration $easing-in-out $effect-duration * 0.3;
+    }
+    &-transition-backward {
+      transition: right $effect-duration $easing-in-out $effect-duration * 0.3,
+      left $effect-duration $easing-in-out;
+    }
+  }
+  &-line {
+    >.#{$prefixClass}-item {
+      position: relative;
+      &::after{
+        content: " ";
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 1px;
+        bottom: 0;
+        border-right: 1px solid #C7C7C7;
+        color: #C7C7C7;
+        transform-origin: 100% 0;
+        transform: scaleX(0.5);
+      }
+    }
+  }
+}
+.biu-tab-bar-top .#{$prefixClass} {
+  &-ink-bar {
+    top: 0;
+  }
+}
+.biu-tab {
+  display: flex;
+  background-color: #fff;
+  height: 1rem;
+  position: relative;
+}
+.biu-tab button {
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: 0 0;
+  appearance: none;
+}
+.biu-tab .biu-tab-item {
+  display: block;
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background: linear-gradient(180deg, #e5e5e5, #e5e5e5, rgba(229, 229, 229, 0)) bottom left no-repeat;
+  background-size: 100% 1px;
+  font-size: .28rem;
+  text-align: center;
+  line-height: 1rem;
+  color: $tab-text-default-color;
+}
+.biu-tab .biu-tab-item.biu-tab-selected {
+  color: $tab-text-active-color;
+  border-bottom: 3px solid $tab-text-active-color;
+}
+.biu-tab-bar-top {
+  // .biu-tab .biu-tab-item {
+  //   background: linear-gradient(180deg, #e5e5e5, #e5e5e5, rgba(229, 229, 229, 0)) top left no-repeat;
+  //   background-size: 100% 1px;
+  // }
+  .biu-tab .biu-tab-item.biu-tab-selected {
+    border-bottom: none;
+    border-top: 3px solid $tab-text-active-color;
+  }
+}
+.biu-tab .biu-tab-item.biu-tab-disabled {
+  color: $tab-text-disabled-color;
+}
+.biu-tab.biu-tab-no-animate .biu-tab-item.biu-tab-selected {
+  background: 0 0;
+}
+/** when=prop:custom-bar-width **/
+.biu-tab-bar-inner {
+  display: block;
+  background-color: $tab-text-active-color;
+  margin: auto;
+  height: 100%;
+  transition: width 0.3s $easing-in-out;
+}
+.biu-tab-wrap {
+  position: relative;
+  padding-top: 1rem;
+}
+.biu-tab-container {
+  height: 1rem;
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  position: absolute;
+}
+.scrollable {
+  overflow-y: hidden;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  box-sizing: content-box;
+}
+.scrollable::-webkit-scrollbar {
+  display: none;
+}
+.scrollable .biu-tab-ink-bar {
+  position: absolute;
+}
+.scrollable .biu-tab-item {
+  flex: 0 0 22%;
+}

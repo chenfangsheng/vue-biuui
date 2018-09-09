@@ -1,0 +1,63 @@
+@import "../common/variables";
+
+.#{$prefix} {
+    //toast
+    &-flexview{
+        height: 100%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        margin: 0 auto;
+        max-width: 750px;
+        min-width: 300px;
+    }
+    &-header {
+        position: relative;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.2);
+        z-index: 2;
+    }
+    &-body {
+        width: 100%;
+        height: 100%;
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+        position: relative;
+        /*margin-bottom: -1px;*/
+        /*&:after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: .5rem;
+        }*/
+    }
+    &-footer {
+        width: 100%;
+        position: relative;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        padding: .104rem 0 .07rem;
+        background-color: hsla(0,0%,100%,.96);
+    }
+}
