@@ -6,7 +6,9 @@
     <br>
 </p>
 <br/>
+
 # vue-biuui
+
 #### 一款基于Vue2.5的移动端UI组件库。
 
 > Demo: <a href="http://www.stormfury.cn/biuui/demo/index.html"> http://www.stormfury.cn/biuui/demo/index.html </a>  
