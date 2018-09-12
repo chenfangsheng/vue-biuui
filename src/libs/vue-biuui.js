@@ -22,6 +22,7 @@ import { Checkbox, CheckboxGroup } from './components/checkbox';
 import { Switch } from './components/switch';
 import { Icon } from './components/icon';
 import { Collapse, CollapseItem } from './components/collapse';
+import { Tabbar, TabbarItem } from './components/tabbar';
 
 
 const install = (Vue) => {
@@ -79,6 +80,9 @@ const install = (Vue) => {
 
 	Vue.component(Collapse.name, Collapse);
 	Vue.component(CollapseItem.name, CollapseItem);
+
+	Vue.component(Tabbar.name, Tabbar);
+	Vue.component(TabbarItem.name, TabbarItem);
 	
 	Vue.prototype.$dialog = {
 		toast: Toast,

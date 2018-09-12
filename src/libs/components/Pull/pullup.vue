@@ -4,17 +4,21 @@
 
     <div ref="tag" style="height: 0;"></div>
 
-    <div class="biu-list-loading" v-if="!isDone">
-      <div v-show="isLoading">
-        <slot name="loadingTip">
-          <loading></loading>
-        </slot>
+    <div class="biu-pullup-type">
+      <div class="biu-list-loading" v-show="!isDone">
+        <!-- <div v-show="isLoading"> -->
+        <div>
+          <slot name="loadingTip">
+            <loading></loading>
+          </slot>
+        </div>
+      </div>
+
+      <div class="biu-list-donetip" v-show="!isLoading && isDone">
+        <slot name="doneTip">没有更多数据了</slot>
       </div>
     </div>
-
-    <div class="biu-list-donetip" v-show="!isLoading && isDone">
-      <slot name="doneTip">没有更多数据了</slot>
-    </div>
+    
   </div>
 </template>
 

@@ -20,13 +20,13 @@
 			</biu-list-wrap>
 
 			<biu-list-wrap title='自定义图片'>
-				<biu-list-cell type='div' mediaImg='../../static/images/vue-logo.png' arrow>
+				<biu-list-cell type='div' mediaImg='http://www.stormfury.cn/demo/static/images/vue-logo.png' arrow>
 					<div slot='left'>
 						<span class="biu-media-title">VUE</span>
 						<p class="biu-media-info">一个易用、灵活、高效的JavaScript 框架</p>
 					</div>
 				</biu-list-cell>
-				<biu-list-cell type='div' mediaImg='../../static/images/logo.png' arrow>
+				<biu-list-cell type='div' mediaImg='http://www.stormfury.cn/demo/static/images/logo.png' arrow>
 					<div slot='left'>
 						<span class="biu-media-title">BIU UI</span>
 						<p class="biu-media-info">试一试呗</p>
@@ -35,7 +35,7 @@
 			</biu-list-wrap>
 
 			<biu-list-wrap title='更改自定义图片大小'>
-				<biu-list-cell type='div' media-img='../../static/images/react-logo.png' media-width='1.2rem' arrow>
+				<biu-list-cell type='div' media-img='http://www.stormfury.cn/demo/static/images/react-logo.png' media-width='1.2rem' arrow>
 					<div slot='left'>
 						<span class="biu-media-title">React</span>
 						<p class="biu-media-info">一个用于构建用户界面的 JAVASCRIPT 库</p>

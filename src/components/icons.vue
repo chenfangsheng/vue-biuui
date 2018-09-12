@@ -83,13 +83,17 @@ export default {
         {name: 'slider'},
         {name: 'top'},
         {name: 'grid'},
-        {name: 'grid'},
         {name: 'media-list'},
         {name: 'error'},
         {name: 'warn'},
         {name: 'success'},
         {name: 'button'},
-        {name: 'dialog'}
+        {name: 'dialog'},
+        {name: 'index'},
+        {name: 'index-solid'},
+        {name: 'user'},
+        {name: 'user-solid'},
+        {name: 'layout'}
       ]
     }
   }

@@ -17,6 +17,7 @@ LoadingConstructor.prototype.close = () => {
 LoadingConstructor.prototype.open = (options = {}) => {
   instance.type = 'biu-dialog-' + (options.type || 'default');
   instance.mes = options.mes || '';
+  instance.direction = 'biu-dialog-' + (options.vertical ? 'vertical' : 'horizontal');
 	
   document.body.appendChild(instance.$el);
   

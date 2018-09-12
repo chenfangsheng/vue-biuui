@@ -4,7 +4,7 @@
 			<biu-pullup :callback="loadList" ref="pullup">
 				<biu-grid-wrap :rows='2' slot="list" height='50vw'>
 					<biu-grid-item v-for="(item,index) in list" :key='index'>
-						<img :src="item.url" alt="">
+						<img class="biu-preview-img" :src="item.url" alt="" @click="show(index)">
 					</biu-grid-item>
 				</biu-grid-wrap>
 				<!-- 数据全部加载完毕显示 -->
@@ -12,36 +12,43 @@
 			</biu-pullup>
 
 			<biu-backtop iconColor='#19be6b'></biu-backtop>
+			<biu-preview :list="imgList" ref="previewer"></biu-preview>
 		</biu-body>
 	</biu-layout>
 </template>
 
 <script>
 export default {
-	data() {
-		return {
-			list: [],
-			size: 10,
-			page: 1
-		}
-	},
-	mounted() {
-		this.loadList();
-	},
+  data() {
+    return {
+      list: [],
+      size: 10,
+      page: 1
+    };
+  },
+  computed: {
+    imgList () {
+      return this.list.map(one => {
+        return {src: one.url};
+      })
+    }
+  },
+  mounted() {
+    this.loadList();
+  },
   methods: {
     loadList() {
-			const _this = this;
+      const _this = this;
 
-      this.$http.get("https://gank.io/api/data/福利/"+_this.size+"/"+_this.page)
+      this.$http
+        .get("https://gank.io/api/data/福利/" + _this.size + "/" + _this.page)
         .then(function(response) {
           const _list = response.data;
           _this.list = [..._this.list, ..._list.results];
 
           if (_list.length < _this.size || _this.page == 5) {
             /* 所有数据加载完毕 */
-            _this.$refs.pullup.$emit(
-              "pullup.loadedDone"
-            );
+            _this.$refs.pullup.$emit("pullup.loadedDone");
             return;
           }
 
@@ -50,13 +57,16 @@ export default {
 
           _this.page++;
         });
+    },
+    show(index) {
+      this.$refs.previewer.show(index);
     }
   }
 };
 </script>
 
 <style lang="scss" scoped>
-img{
-	width: 100%
+img {
+  width: 100%;
 }
 </style>

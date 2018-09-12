@@ -24,24 +24,10 @@ const webpackConfig = merge(baseWebpackConfig, {
     })
   },
   devtool: config.build.productionSourceMap ? config.build.devtool : false,
-  entry: {
-    app: './src/libs/vue-biuui.js'
-  },
   output: {
-    path: path.resolve(__dirname, './dist'), 
-    publicPath: '/dist/',
-    filename: 'vue-biuui.js', // 打包生成的模块名
-    library: 'vue-biuui', // 你使用require时的模块名
-    libraryTarget: 'umd',
-		umdNamedDefine: true
-  },
-  externals: {
-  	vue: {
-		  root: 'Vue',
-		  commonjs: 'vue',
-		  commonjs2: 'vue',
-		  amd: 'vue'
-		}
+    path: config.build.assetsRoot,
+    filename: utils.assetsPath('js/[name].[chunkhash].js'),
+    chunkFilename: utils.assetsPath('js/[id].[chunkhash].js')
   },
   plugins: [
     // http://vuejs.github.io/vue-loader/en/workflow/production.html
@@ -59,7 +45,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     }),
     // extract css into its own file
     new ExtractTextPlugin({
-      filename: utils.assetsPath('vue-biuui.min.css'),
+      filename: utils.assetsPath('css/[name].[contenthash].css'),
       // Setting the following option to `false` will not extract CSS from codesplit chunks.
       // Their CSS will instead be inserted dynamically with style-loader when the codesplit chunk has been loaded by webpack.
       // It's currently set to `true` because we are seeing that sourcemaps are included in the codesplit bundle as well when it's `false`, 

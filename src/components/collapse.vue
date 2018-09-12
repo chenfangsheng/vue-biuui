@@ -7,7 +7,7 @@
         <biu-collapse-item name="1">
             <span>VUE</span>
             <biu-list-wrap slot="content">
-              <biu-list-cell type='div' mediaImg='../../static/images/vue-logo.png'>
+              <biu-list-cell type='div' mediaImg='http://www.stormfury.cn/demo/static/images/vue-logo.png'>
                 <div slot='left'>
                   <span class="biu-media-title">VUE</span>
                   <p class="biu-media-info">一个易用、灵活、高效的JavaScript 框架</p>
@@ -18,7 +18,7 @@
         <biu-collapse-item name="2">
             <span>REACT</span>
             <biu-list-wrap slot="content">
-              <biu-list-cell type='div' mediaImg='../../static/images/react-logo.png'>
+              <biu-list-cell type='div' mediaImg='http://www.stormfury.cn/demo/static/images/react-logo.png'>
                 <div slot='left'>
                   <span class="biu-media-title">REACT</span>
                   <p class="biu-media-info">一个用于构建用户界面的 JAVASCRIPT 库</p>
@@ -53,7 +53,7 @@
                 <biu-collapse-item name="1">
                     <span>VUE</span>
                     <biu-list-wrap slot="content">
-                      <biu-list-cell type='div' mediaImg='../../static/images/vue-logo.png'>
+                      <biu-list-cell type='div' mediaImg='http://www.stormfury.cn/demo/static/images/vue-logo.png'>
                         <div slot='left'>
                           <span class="biu-media-title">VUE</span>
                           <p class="biu-media-info">一个易用、灵活、高效的JavaScript 框架</p>
@@ -64,7 +64,7 @@
                 <biu-collapse-item name="2">
                     <span>REACT</span>
                     <biu-list-wrap slot="content">
-                      <biu-list-cell type='div' mediaImg='../../static/images/react-logo.png'>
+                      <biu-list-cell type='div' mediaImg='http://www.stormfury.cn/demo/static/images/react-logo.png'>
                         <div slot='left'>
                           <span class="biu-media-title">REACT</span>
                           <p class="biu-media-info">一个用于构建用户界面的 JAVASCRIPT 库</p>

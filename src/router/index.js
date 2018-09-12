@@ -191,6 +191,20 @@ export default new Router({
       meta: {
         title: 'Collapse'
       }
+    },{
+      path: '/tabbar',
+      name: 'tabbar',
+      component: resolve => require(['@/components/tabbar.vue'], resolve),
+      meta: {
+        title: 'Tabbar'
+      }
+    },{
+      path: '/layout',
+      name: 'layout',
+      component: resolve => require(['@/components/layout.vue'], resolve),
+      meta: {
+        title: 'Layout'
+      }
     }
   ]
 })

@@ -2,7 +2,7 @@
 	<router-link :to="href" class="biu-list-cell" v-if="type == 'router' && href">
 		<div class="biu-cell-left">
 			<span class="biu-cell-icon" v-if="iconName || newIcon || mediaImg">
-				<biu-icon v-if="iconName" :name='iconName' :color='iconColor' size='.34rem'></biu-icon>
+				<biu-icon v-if="iconName" :name='iconName' :color='iconColor' size='.36rem'></biu-icon>
 				<i v-if="newIcon" class="biu-list-cell-icon" :class="newIcon" :style="{color: iconColor}"></i>
 				<div v-if="mediaImg" class="biu-media-img" :style="{backgroundImage: 'url(' + mediaImg + ')', width: mediaWidth, height: mediaWidth}"></div>
 			</span>
@@ -16,7 +16,7 @@
 	<a :href="href || 'javascript:;'" class="biu-list-cell" v-else-if="type == 'link' || (type == 'router' && !href)">
 		<div class="biu-cell-left">
 			<span class="biu-cell-icon" v-if="iconName || newIcon || mediaImg">
-				<biu-icon v-if="iconName" :name='iconName' :color='iconColor' size='.34rem'></biu-icon>
+				<biu-icon v-if="iconName" :name='iconName' :color='iconColor' size='.36rem'></biu-icon>
 				<i v-if="newIcon" class="biu-list-cell-icon" :class="newIcon" :style="{color: iconColor}"></i>
 				<div v-if="mediaImg" class="biu-media-img" :style="{backgroundImage: 'url(' + mediaImg + ')', width: mediaWidth, height: mediaWidth}"></div>
 			</span>
@@ -30,7 +30,7 @@
 	<div class="biu-list-cell" v-else-if="type == 'div'">
 		<div class="biu-cell-left">
 			<span class="biu-cell-icon" v-if="iconName || newIcon || mediaImg">
-				<biu-icon v-if="iconName" :name='iconName' :color='iconColor' size='.34rem'></biu-icon>
+				<biu-icon v-if="iconName" :name='iconName' :color='iconColor' size='.36rem'></biu-icon>
 				<i v-if="newIcon" class="biu-list-cell-icon" :class="newIcon" :style="{color: iconColor}"></i>
 				<div v-if="mediaImg" class="biu-media-img" :style="{backgroundImage: 'url(' + mediaImg + ')', width: mediaWidth, height: mediaWidth}"></div>
 			</span>
@@ -44,7 +44,7 @@
 	<label class="biu-list-cell" v-else-if="type == 'checkbox' || type == 'radio'">
 		<div class="biu-cell-left">
 			<span class="biu-cell-icon" v-if="iconName || newIcon || mediaImg">
-				<biu-icon v-if="iconName" :name='iconName' :color='iconColor' size='.34rem'></biu-icon>
+				<biu-icon v-if="iconName" :name='iconName' :color='iconColor' size='.36rem'></biu-icon>
 				<i v-if="newIcon" class="biu-list-cell-icon" :class="newIcon" :style="{color: iconColor}"></i>
 				<div v-if="mediaImg" class="biu-media-img" :style="{backgroundImage: 'url(' + mediaImg + ')', width: mediaWidth, height: mediaWidth}"></div>
 			</span>

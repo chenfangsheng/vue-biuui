@@ -2,14 +2,14 @@
 	<biu-layout>
 		<biu-body slot='body'>
 			<biu-list-wrap title='城市联动'>
-				<biu-list-cell type='div' icon='city' iconColor='#19be6b' arrow @click.native="show = true">
+				<biu-list-cell type='div' icon-name='city' icon-color='#19be6b' arrow @click.native="show = true">
 					<span slot='left'>所在城市：</span>
 					<span slot='right' v-text="modelText"></span>
 				</biu-list-cell>
 			</biu-list-wrap>
 			
 			<biu-list-wrap title='普通联动'>
-				<biu-list-cell type='div' icon='popup' iconColor='#19be6b' arrow @click.native="show1 = true">
+				<biu-list-cell type='div' icon-name='popup' icon-color='#19be6b' arrow @click.native="show1 = true">
 					<span slot='left'>所在年级：</span>
 					<span slot='right' v-text="modelText1"></span>
 				</biu-list-cell>

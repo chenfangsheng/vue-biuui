@@ -1,6 +1,15 @@
+<p align="center">
+    <br>
+    <a href="http://www.stormfury.cn/biuui/demo/index.html">
+        <img width="200" src="http://www.stormfury.cn/biuui/demo/static/images/logo.png">
+    </a>
+    <br>
+</p>
+<br/>
 # vue-biuui
+#### 一款基于Vue2.5的移动端UI组件库。
 
-> Beautiful UI
+> Demo: <a href="http://www.stormfury.cn/biuui/demo/index.html"> http://www.stormfury.cn/biuui/demo/index.html </a>  
 
 ## Build Setup
 

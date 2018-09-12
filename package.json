@@ -2,12 +2,12 @@
   "name": "vue-biuui",
   "version": "1.0.0",
   "description": "Beautiful UI",
-  "author": "chenfangsheng <296096963@qq.com>",
+  "author": "chenfangsheng",
   "private": false,
-  "main": "dist/vue-biuui.js",
+  "main": "dist/vue-biuui.min.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/chenfangsheng/vue-biuui.git"
+    "url": "https://github.com/chenfangsheng/vue-biuui"
   },
   "dependencies": {
     "axios": "^0.18.0",

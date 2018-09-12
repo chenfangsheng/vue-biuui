@@ -1,9 +1,7 @@
 <template>
 	<biu-layout>
 		<biu-body slot='body'>
-			<div class="logo biu-center">
-				<img src="../../static/images/logo.png"/>
-			</div>
+			<div class="logo"></div>
 			<div class="info">
 				一个基于VUE的移动端UI组件库 & BIU-UI
 			</div>
@@ -36,7 +34,9 @@ export default {
 				{name: 'switch', text: 'Switch', link: '/switch', color: '#fc746c'},
 				{name: 'alien', text: 'Icons', link: '/icons', color: '#fc746c'},
 				{name: 'flexbox', text: 'FlexBox', link: '/flexBox', color: '#2db7f5'},
-				{name: 'list', text: 'List', link: '/list', color: '#ff9900'},
+				{name: 'list', text: 'List', link: '/list', color: '#19be6b'},
+				{name: 'menu', text: 'TabBar', link: '/tabbar', color: '#8b78e2'},
+				{name: 'layout', text: 'Layout', link: '/layout', color: '#ff9900'},
 				{name: 'tab', text: 'Tab', link: '/tab', color: '#8b78e2'},
 				{name: 'collapse', text: 'Collapse', link: '/collapse', color: '#fc746c'},
 				{name: 'dialog', text: 'Dialog', link: '/dialog', color: '#3cc51e'},
@@ -60,10 +60,10 @@ export default {
 
 <style lang="scss">
 .logo{
-	padding: .3rem 0 .2rem;
-	img{
-		height: 1.5rem;
-	}
+	height: 2.5rem;
+	background: url(../../static/images/logo.png) no-repeat;
+	background-position: center;
+	background-size: 1.8rem 1.8rem;
 }
 .info{
 	width: 100%;

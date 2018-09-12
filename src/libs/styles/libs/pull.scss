@@ -36,8 +36,13 @@ $pullrefreshLoading: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAMA
       height: .66rem;
     }
   }
-
+  &-pullup-type {
+    height: .66rem;
+    margin-bottom: .15rem;
+    overflow: hidden;
+  }
   &-list-donetip {
+    height: .66rem;
     font-size: .24rem;
     text-align: center;
     padding: .25rem 0;

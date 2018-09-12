@@ -4,7 +4,7 @@ $iconfont-icons: 'BIU-ICONS';
 
 @font-face {
   font-family: $iconfont-icons;
-  src: url('//at.alicdn.com/t/font_807478_znn2zmh9enm.ttf') format('truetype');
+  src: url('//at.alicdn.com/t/font_807478_4f1popfjomi.ttf') format('truetype');
 }
 
 [class^="#{$prefix}-icon-"]:before, [class*=" #{$prefix}-icon-"]:before {
@@ -222,5 +222,20 @@ $iconfont-icons: 'BIU-ICONS';
   }
   &-icon-dialog:before {
     content: '\e6fa';
+  }
+  &-icon-index-solid:before {
+    content: '\e605';
+  }
+  &-icon-index:before {
+    content: '\e604';
+  }
+  &-icon-user:before {
+    content: '\e670';
+  }
+  &-icon-user-solid:before {
+    content: '\e66f';
+  }
+  &-icon-layout:before {
+    content: '\e655';
   }
 }

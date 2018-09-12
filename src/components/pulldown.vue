@@ -5,12 +5,13 @@
 			<biu-pulldown :callback="loadList" ref="pulldown">
 				<biu-grid-wrap :rows='2' height='50vw'>
 					<biu-grid-item v-for="(item,index) in list" :key='index'>
-						<img :src="item.url" alt="">
+						<img class="biu-preview-img" :src="item.url" alt="" @click="show(index)">
 					</biu-grid-item>
 				</biu-grid-wrap>
 			</biu-pulldown>
 
 			<biu-backtop iconColor='#19be6b'></biu-backtop>
+			<biu-preview :list="imgList" ref="previewer"></biu-preview>
 		</biu-body>
 	</biu-layout>
 </template>
@@ -24,6 +25,13 @@ export default {
 			page: 1
 		}
 	},
+	computed: {
+    imgList () {
+      return this.list.map(one => {
+        return {src: one.url};
+      })
+    }
+  },
 	mounted() {
 		this.loadList();
 	},
@@ -41,6 +49,9 @@ export default {
          	 	
           _this.page++;
         });
+		},
+		show (index) {
+      this.$refs.previewer.show(index)
     }
   }
 };

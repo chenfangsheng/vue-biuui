@@ -15,6 +15,7 @@
 				
 				<biu-button size='large' @click.native="showLoading('defail')">loading->type：defail</biu-button>
 				<biu-button size='large' type='primary' @click.native="showLoading('primary')">loading->type：primary</biu-button>
+				<biu-button size='large' type='defail' @click.native="showLoading('defail', true)">loading->vertical：true</biu-button>
 			</div>
 		</biu-body>
 	</biu-layout>
@@ -53,8 +54,8 @@ export default {
 				}
 			});
 		},
-		showLoading(type) {
-			this.$dialog.loading.open({type: type, mes: '正在加载'});
+		showLoading(type, direction) {
+			this.$dialog.loading.open({type: type, mes: '正在加载', vertical: direction ? true : false});
 			setTimeout(() => {
 				this.$dialog.loading.close();
 			},2000)

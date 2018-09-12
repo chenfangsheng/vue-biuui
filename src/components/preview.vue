@@ -3,9 +3,7 @@
 		<biu-body slot='body' bg='#fff'>
 			<biu-grid-wrap :rows='3' height='33vw' :line='false' class='preview-demo-box'>
 				<biu-grid-item v-for="(item, index) in list" :key='index' class="biu-center">
-					<div class="preview-box biu-preview-img">
-						<img :src="item.src" @click="show(index)">
-					</div>
+					<div class="preview-box biu-preview-img" :style="{backgroundImage: 'url('+ item.src +')'}"  @click="show(index)"></div>
 				</biu-grid-item>
 			</biu-grid-wrap>
 			
@@ -20,29 +18,17 @@ export default {
 		return {
 			list: [
 				{
-				  src: 'https://gratisography.com/thumbnails/gratisography-267-thumbnail-small.jpg',
-					title: 'Hanging Umbrellas'
+				  src: 'http://www.stormfury.cn/demo/static/images/my-cat1.jpg',
+					title: '我家小蓝白的美照------1'
 				  //msrc: ... //缩略图地址
 				},
 				{
-				  src: 'https://gratisography.com/thumbnails/gratisography-282-thumbnail-small.jpg',
-					title: 'Colorful City Building'
+				  src: 'http://www.stormfury.cn/demo/static/images/my-cat2.jpg',
+					title: '我家小蓝白的美照------2'
 				},
 				{
-				  src: 'https://gratisography.com/thumbnails/gratisography-237-thumbnail-small.jpg',
-					title: 'Barbed Wire Fence'
-				},
-				{
-				  src: 'https://gratisography.com/thumbnails/gratisography-258-thumbnail-small.jpg',
-					title: 'Colorful City Building'
-				},
-				{
-				  src: 'https://gratisography.com/thumbnails/gratisography-261-thumbnail-small.jpg',
-					title: 'Coffee Beans'
-				},
-				{
-				  src: 'https://gratisography.com/thumbnails/gratisography-290-thumbnail-small.jpg',
-					title: 'Woman with Donut Fingers'
+				  src: 'http://www.stormfury.cn/demo/static/images/my-cat3.jpg',
+					title: '我家小蓝白的美照------3'
 				}
 			]
 		}
@@ -69,13 +55,8 @@ export default {
 	padding-top: 90%;
 }
 .biu-preview-img{
-	img{
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		transform: translate3d(-50%,-50%,0);
-		height: 100%;
-	}
-	
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 </style>

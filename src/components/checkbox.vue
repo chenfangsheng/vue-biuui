@@ -47,7 +47,7 @@
 						<biu-checkbox val="B" shape='circle'></biu-checkbox>
 						<biu-checkbox val="C" shape='circle'></biu-checkbox>
 					</biu-checkbox-group>
-					<span slot='right'>答案：{{checkboxDemo2Val}}</span>
+					<span slot='right'>答案：{{checkboxDemo5Val}}</span>
 				</biu-list-cell>
 			</biu-list-wrap>
 

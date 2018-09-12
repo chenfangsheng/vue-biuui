@@ -12,7 +12,6 @@
       padding: 0 .24rem;
       overflow: hidden;
       position: relative;
-      transition: all .2s $ease-in-out;
       >.#{$prefix}-collapse-title {
         min-height: 1rem;
         display: flex;

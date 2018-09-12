@@ -182,7 +182,7 @@ export default {
 	          // return {x: rect.left, y: rect.top + pageYScroll, w: rect.width}
 	          // Good guide on how to get element coordinates:
 	          // http://javascript.info/tutorial/coordinates
-	        }
+          }
         }
       }
     }
